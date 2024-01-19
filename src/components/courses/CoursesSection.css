@@ -19,28 +19,82 @@ h2 {
 .course_card {
   width: 301px;
   height: 415px;
-  padding: 20px;
-  border: 1px solid #ccc;
+  border: 1px solid white;
+  outline: none;
   border-radius: 8px;
   margin: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
 }
 
 .course_image {
   width: 100%;
-  height: 200px;
+  height: 160px;
   object-fit: cover;
   border-radius: 8px 8px 0 0;
 }
-
-h3 {
-  margin-bottom: 10px;
-  color: #333; /* Set your desired text color */
+.course_contents {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 1.2rem;
+  gap: 2rem;
+}
+.course_title {
+  font-weight: bold;
+}
+.course_description {
+  font-size: small;
+  font-weight: bold;
+}
+.course_button {
+  font-size: 0.9rem;
+  color: #01a8e8;
+  font-weight: bold;
+}
+.course_button:hover {
+  cursor: pointer;
+  color: #0c92c7;
+  transition: 0.4s;
+}
+.course_button_container {
+  display: flex;
+  justify-content: center;
+  margin-top: 3.5rem;
+  align-items: center;
+  gap: 1rem;
+}
+p {
+  color: white;
 }
 
-p {
-  color: #666; /* Set your desired text color */
+@media screen and (max-width: 480px) {
+  .cards_container {
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .course_card {
+    width: 100%;
+    max-width: none;
+    margin: 10px 0;
+  }
+
+  .course_contents {
+    padding: 1rem;
+    align-items: flex-start;
+    text-align: center;
+  }
+
+  .course_button_container {
+    margin-top: 3rem;
+    gap: 0.5rem;
+  }
+
+  .course_button {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem; /* Adjust padding for better spacing on smaller screens */
+  }
 }

@@ -1,61 +1,63 @@
 import React from "react";
 import "./CoursesSection.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
 export default function CoursesSection() {
   const courses = [
     {
       id: 1,
-      title: "Course 1",
-      description: "Description for Course 1",
-      image: "course1.jpg",
+      title: "iOS Development",
+      description: "რეგისტრაცია დასრულებულია",
+      image: "../../../assets/courses/ios.png",
     },
     {
       id: 2,
-      title: "Course 2",
-      description: "Description for Course 2",
-      image: "course2.jpg",
+      title: "React",
+      description: "რეგისტრაცია დასრულებულია",
+      image: "../../../assets/courses/react.png",
     },
     {
       id: 3,
-      title: "Course 3",
-      description: "Description for Course 3",
-      image: "course3.jpg",
+      title: "Intro to Python",
+      description: "რეგისტრაცია დასრულებულია",
+      image: "../../../assets/courses/python.png",
     },
     {
-      id: 3,
-      title: "Course 3",
-      description: "Description for Course 3",
-      image: "course3.jpg",
+      id: 4,
+      title: "Advanced Python",
+      description: "რეგისტრაცია დასრულებულია",
+      image: "../../../assets/courses/python.png",
     },
     {
-      id: 3,
-      title: "Course 3",
-      description: "Description for Course 3",
-      image: "course3.jpg",
+      id: 5,
+      title: "Advanced Cybersecurity Course",
+      description: "რეგისტრაცია დასრულებულია",
+      image: "../../../assets/courses/cyber.png",
     },
     {
-      id: 3,
-      title: "Course 3",
-      description: "Description for Course 3",
-      image: "course3.jpg",
+      id: 6,
+      title: " ToT - Training of Trainers",
+      description: "რეგისტრაცია დასრულებულია",
+      image: "../../../assets/courses/training.png",
     },
     {
-      id: 3,
-      title: "Course 3",
-      description: "Description for Course 3",
-      image: "course3.jpg",
+      id: 7,
+      title: "Blockchain",
+      description: "რეგისტრაცია დასრულებულია",
+      image: "../../../assets/courses/blockchain.png",
     },
     {
-      id: 3,
-      title: "Course 3",
-      description: "Description for Course 3",
-      image: "course3.jpg",
+      id: 8,
+      title: "DevOps",
+      description: "რეგისტრაცია დასრულებულია",
+      image: "../../../assets/courses/devops.png",
     },
     {
-      id: 3,
-      title: "Course 3",
-      description: "Description for Course 3",
-      image: "course3.jpg",
+      id: 9,
+      title: "Information Security Governance",
+      description: "რეგისტრაცია დასრულებულია",
+      image: "../../../assets/courses/security.png",
     },
   ];
 
@@ -70,8 +72,18 @@ export default function CoursesSection() {
               alt={course.title}
               className="course_image"
             />
-            <h3>{course.title}</h3>
-            <p>{course.description}</p>
+            <div className="course_contents">
+              <p className="course_title">{course.title}</p>
+              <p className="course_description">{course.description}</p>
+              <div className="course_button_container">
+                <FontAwesomeIcon
+                  icon={faArrowRight}
+                  size="s"
+                  style={{ color: "#01a8e8" }}
+                />
+                <p className="course_button">კურსის დეტალები</p>
+              </div>
+            </div>
           </div>
         ))}
       </div>
