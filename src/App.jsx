@@ -2,6 +2,7 @@ import React from "react";
 import Header from "./components/header/Header";
 import HeroPage from "./components/heroPage/HeroPage";
 import CoursesSection from "./components/courses/CoursesSection";
+import Slider from "./components/slider/Slider";
 
 export default function App() {
   return (
@@ -9,6 +10,7 @@ export default function App() {
       <Header />
       <HeroPage />
       <CoursesSection />
+      <Slider />
     </div>
   );
 }

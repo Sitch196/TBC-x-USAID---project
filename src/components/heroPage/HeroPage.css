@@ -32,7 +32,7 @@
 
 @media screen and (max-width: 480px) {
   .hero_text {
-    font-size: 16px; /* Adjust as needed */
-    max-width: 100%; /* Allow text to take full width on smaller screens */
+    font-size: 16px;
+    max-width: 100%;
   }
 }
