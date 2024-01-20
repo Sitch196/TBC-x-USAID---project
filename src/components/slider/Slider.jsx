@@ -1,16 +1,15 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import "./Slider.css";
+import usaid from "../../../assets/partners/usaid.png";
+import space from "../../../assets/partners/space.png";
+import tnet from "../../../assets/partners/tnet.png";
+import tegeta from "../../../assets/partners/tegeta.png";
+import spectre from "../../../assets/partners/spectre.png";
+import tbcleasing from "../../../assets/partners/tbcleasing.png";
+import ufc from "../../../assets/partners/ufc.png";
 
-const images = [
-  "/assets/partners/usaid.png",
-  "/assets/partners/space.png",
-  "/assets/partners/tnet.png",
-  "/assets/partners/tegeta.png",
-  "/assets/partners/spectre.png",
-  "/assets/partners/tbcleasing.png",
-  "/assets/partners/ufc.png",
-];
+const images = [usaid, space, tnet, tegeta, spectre, tbcleasing, ufc];
 
 const Slider = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
