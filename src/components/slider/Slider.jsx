@@ -3,13 +3,13 @@ import { motion, AnimatePresence } from "framer-motion";
 import "./Slider.css";
 
 const images = [
-  "../../../assets/partners/usaid.png",
-  "../../../assets/partners/space.png",
-  "../../../assets/partners/tnet.png",
-  "../../../assets/partners/tegeta.png",
-  "../../../assets/partners/spectre.png",
-  "../../../assets/partners/tbcleasing.png",
-  "../../../assets/partners/ufc.png",
+  "/assets/partners/usaid.png",
+  "/assets/partners/space.png",
+  "/assets/partners/tnet.png",
+  "/assets/partners/tegeta.png",
+  "/assets/partners/spectre.png",
+  "/assets/partners/tbcleasing.png",
+  "/assets/partners/ufc.png",
 ];
 
 const Slider = () => {
