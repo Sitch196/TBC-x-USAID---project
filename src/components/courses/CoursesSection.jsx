@@ -78,7 +78,7 @@ export default function CoursesSection() {
               <div className="course_button_container">
                 <FontAwesomeIcon
                   icon={faArrowRight}
-                  size="s"
+                  size="lg"
                   style={{ color: "#01a8e8" }}
                 />
                 <p className="course_button">კურსის დეტალები</p>

@@ -1,7 +1,7 @@
 // Updated Component
 import React, { useState } from "react";
 import "./header.css";
-import logo from "../../../assets/tbcLogo.png";
+import logo from "../../../assets/logoandtitle.png";
 import hero from "../../../assets/heroImage.png";
 
 export default function Header() {
@@ -17,8 +17,7 @@ export default function Header() {
     >
       <nav className="nav_wrapper">
         <div className="logo_Wrapper">
-          <img src={logo} width={80} />
-          <p className="logo_Title">x აკადემია</p>
+          <img className="logo" src={logo} width={80} />
         </div>
         <div
           className={`burger-menu-icon ${isBurgerMenuOpen ? "open" : ""}`}

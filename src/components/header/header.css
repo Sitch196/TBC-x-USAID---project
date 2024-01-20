@@ -9,23 +9,14 @@
   justify-content: space-evenly;
   align-items: center;
   background-color: #1a1e1f;
-  padding: 1.2rem;
+  padding: 1.1rem;
   color: white;
   position: sticky;
   top: 0;
 }
-
-.logo_Wrapper {
-  display: flex;
-  align-items: center;
+.logo {
+  width: 180px;
 }
-
-.logo_Title {
-  font-weight: bold;
-  font-size: 1.3rem;
-  color: white;
-}
-
 .current_Link {
   color: #0699d6;
 }
