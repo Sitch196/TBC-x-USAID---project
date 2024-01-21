@@ -15,7 +15,7 @@
   top: 0;
 }
 .logo {
-  width: 180px;
+  width: 210px;
 }
 .current_Link {
   color: #0699d6;
@@ -33,7 +33,7 @@ li {
   margin-right: 20px;
   font-weight: bold;
   color: white;
-  font-size: small;
+  font-size: medium;
 }
 
 li:hover {

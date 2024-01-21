@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import "./Slider.css";
 import usaid from "../../../assets/partners/usaid.png";
@@ -28,34 +28,51 @@ const Slider = () => {
     );
   };
 
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      nextSlide();
+    }, 5000);
+
+    return () => {
+      clearInterval(intervalId);
+    };
+  }, [currentIndex]);
+
   return (
-    <section className="slider_container">
-      <AnimatePresence mode="wait">
-        <motion.div
-          key={currentIndex}
-          className="slider_content"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 0.5, ease: "easeInOut" }}
-        >
-          {images.slice(currentIndex, currentIndex + 3).map((image, index) => (
-            <img
-              key={index}
-              src={image}
-              alt={`slide${index + 1}`}
-              className="slider_image"
-            />
-          ))}
-        </motion.div>
-      </AnimatePresence>
-      <div className="slider_arrow arrow_left" onClick={prevSlide}>
-        {"<"}
+    <main className="section_wrapper">
+      <div className="partner_title_container">
+        <h2>პროექტის პარტნიორები</h2>
       </div>
-      <div className="slider_arrow arrow_right" onClick={nextSlide}>
-        {">"}
-      </div>
-    </section>
+      <section className="slider_container">
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={currentIndex}
+            className="slider_content"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.5, ease: "easeInOut" }}
+          >
+            {images
+              .slice(currentIndex, currentIndex + 3)
+              .map((image, index) => (
+                <img
+                  key={index}
+                  src={image}
+                  alt={`slide${index + 1}`}
+                  className="slider_image"
+                />
+              ))}
+          </motion.div>
+        </AnimatePresence>
+        <div className="slider_arrow arrow_left" onClick={prevSlide}>
+          {"<"}
+        </div>
+        <div className="slider_arrow arrow_right" onClick={nextSlide}>
+          {">"}
+        </div>
+      </section>
+    </main>
   );
 };
 
