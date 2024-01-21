@@ -35,7 +35,7 @@ export default function Header() {
         </ul>
       </nav>
       <main>
-        <img src={hero} alt="hero image" />
+        <img src={hero} alt="hero image" className="hero_image" />
       </main>
     </section>
   );

@@ -68,7 +68,9 @@ main img {
   .nav_wrapper {
     justify-content: space-between;
   }
-
+  .hero_image {
+    height: 7.5rem;
+  }
   .nav-links {
     display: none;
     flex-direction: column;
