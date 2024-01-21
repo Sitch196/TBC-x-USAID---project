@@ -4,15 +4,17 @@ import HeroPage from "./components/heroPage/HeroPage";
 import CoursesSection from "./components/courses/CoursesSection";
 import Slider from "./components/slider/Slider";
 import Accordion from "./components/accordion/Accordion";
+import Footer from "./components/footer/Footer";
 
 export default function App() {
   return (
-    <div>
+    <main>
       <Header />
       <HeroPage />
       <CoursesSection />
       <Slider />
       <Accordion />
-    </div>
+      <Footer />
+    </main>
   );
 }

@@ -22,17 +22,18 @@
   transition: 0.5s ease-in-out;
 }
 .question {
-  font-weight: 500;
+  font-weight: 600;
   font-size: 1.15rem;
 }
 .answer {
   margin-top: 1rem;
   font-size: 0.9rem;
   text-align: left;
-  font-weight: bold;
 }
 .accordion_subtext {
   font-size: 0.9rem;
+}
+.accordion_subtext span {
   font-weight: bold;
 }
 .accordion-item {
@@ -69,14 +70,23 @@
 .accordion-item.open .arrow {
   transform: rotate(180deg);
 }
+.all_questions {
+  display: none;
+}
 
 @media only screen and (max-width: 1024px) {
   .accordion_container {
-    padding: 3rem;
+    padding: 1.5rem;
   }
 
   .accordion {
     width: 100%;
+  }
+  .all_questions {
+    display: block;
+    color: #00acf3;
+    text-align: center;
+    margin-top: 2rem;
   }
 
   .accordion_title {
@@ -84,8 +94,13 @@
     font-size: small;
     gap: 0.5rem;
   }
-
+  .second_title_button {
+    display: none;
+  }
   .accordion_title h2 {
     margin-bottom: 1rem;
+  }
+  .accordion-item {
+    padding: 1.5rem 0;
   }
 }
