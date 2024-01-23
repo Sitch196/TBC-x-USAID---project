@@ -28,6 +28,10 @@ const Slider = () => {
     );
   };
 
+  const goToSlide = (slideIndex) => {
+    setCurrentIndex(slideIndex * 3);
+  };
+
   useEffect(() => {
     const intervalId = setInterval(() => {
       nextSlide();
@@ -71,7 +75,17 @@ const Slider = () => {
         <div className="slider_arrow arrow_right" onClick={nextSlide}>
           {">"}
         </div>
+        <div className="dots_container">
+          {[0, 1, 2].map((dotIndex) => (
+            <div
+              key={dotIndex}
+              className={`dot ${dotIndex * 3 === currentIndex ? "active" : ""}`}
+              onClick={() => goToSlide(dotIndex)}
+            ></div>
+          ))}
+        </div>
       </section>
+      <div></div>
     </main>
   );
 };

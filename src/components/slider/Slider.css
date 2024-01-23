@@ -4,7 +4,7 @@
   width: 100%;
   height: 400px;
   background-color: #2a2a2b;
-  padding: 6rem;
+  padding: 5rem;
   display: flex;
   justify-content: center;
 }
@@ -45,7 +45,26 @@
   color: lightgray;
   transition: 0.3s;
 }
+.dots_container {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+}
 
+.dot {
+  width: 7px;
+  height: 7px;
+  background-color: #ddd;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.dot.active {
+  background-color: #333;
+}
 .arrow_left {
   left: 0;
 }
@@ -58,6 +77,9 @@
   .slider_content {
     flex-direction: column;
     gap: 1rem;
+  }
+  .partner_title_container h2 {
+    font-size: 1.3rem;
   }
   .slider_container {
     padding: 3rem;
